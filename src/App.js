@@ -5,7 +5,7 @@ function App() {
   const tg = window.Telegram.WebApp
   useEffect(() => {
     tg.ready()
-  }, [])
+  }, [tg])
 
   return (
     <div className="App">
