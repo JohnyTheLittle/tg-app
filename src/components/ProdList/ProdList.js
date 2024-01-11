@@ -4,7 +4,7 @@ import './ProdList.css'
 const ProdList = () => {
     return (
         <div>
-
+            ProdList
         </div>
     )
 }
