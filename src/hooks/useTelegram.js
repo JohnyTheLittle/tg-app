@@ -3,6 +3,7 @@ const tg = wndow.Telegram.WebApp
 export function useTelegram() {
   const onClose = () => {
     tg.close()
+    console.log(tg.initDataUnsafe)
   }
   const onToggleButton = () => {
     if (tg.MainButton.isVisible) {
