@@ -8,7 +8,11 @@ const Form = () => {
   const [subject, setSubject] = useState('endless_horror')
   const { tg } = useTelegram()
 
-  useEffect(() => {}, [])
+  useEffect(() => {
+    tg.WebApp.onEvent('mainButtonClicked', () => {
+      tg.SendData({subject, city, street})
+    })
+  }, [tg.WebApp])
   useEffect(() => {
     tg.MainButton.setParams({
       text: 'Отправить данные',
