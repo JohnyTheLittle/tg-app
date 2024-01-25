@@ -12,7 +12,7 @@ const Form = () => {
     tg.WebApp.onEvent('mainButtonClicked', () => {
       tg.SendData({subject, city, street})
     })
-  }, [tg.WebApp])
+  }, [tg, subject, city, street, tg.WebApp])
   useEffect(() => {
     tg.MainButton.setParams({
       text: 'Отправить данные',
